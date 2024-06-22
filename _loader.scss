@@ -1,0 +1,54 @@
+// @use "sass:string";
+
+@function gtkalpha($c, $a) {
+  @return unquote($string: "alpha(#{$c},#{$a})");
+}
+
+@function gtkmix($c1, $c2, $r) {
+  $ratio: 1 - $r / 100%; // match SCSS mix()
+  @return unquote($string: "mix(#{$c1},#{$c2},#{$ratio})");
+}
+
+/**
+ * Multiplies the luminance of $c by $s
+ */
+@function gtkshade($c, $s) {
+  @return unquote($string: "shade(#{$c},#{$s})");
+}
+
+@function gtkcolor($c) {
+  @return unquote($string: "@#{$c}")
+}
+
+// @use "functions" as *;
+// @use 'sass:color';
+
+
+$theme_fg_color: gtkcolor(theme_fg_color);
+
+$theme_bg_color: gtkcolor(theme_bg_color);
+
+$theme_base_color: gtkcolor(theme_base_color);
+
+$theme_selected_bg_color: gtkcolor(theme_selected_bg_color);
+
+$theme_selected_fg_color: gtkcolor(theme_selected_fg_color);
+
+
+$theme_text_color: gtkcolor(theme_text_color);
+$wm_borders_edge: gtkcolor(wm_borders_edge);
+$wm_unfocused_bg: gtkcolor(wm_unfocused_bg);
+$content_view_bg: gtkcolor(content_view_bg);
+$theme_unfocused_fg_color: gtkcolor(theme_unfocused_fg_color);
+$theme_unfocused_bg_color: gtkcolor(theme_unfocused_bg_color);
+
+$borders: gtkcolor(borders);
+$unfocused_borders: gtkcolor(unfocused_borders);
+
+// To be compatible with non libadwita themes
+$popup_bg_color: gtkshade($theme_bg_color, 1.57);
+$panel_focused_bg_color : gtkshade($theme_bg_color, 1.57);
+
+$button_normal_color: gtkshade($theme_bg_color, 1.106);
+$button_hover_color: gtkshade($theme_bg_color, 1.207);
+$button_active_color: gtkshade($theme_bg_color, 1.32);
