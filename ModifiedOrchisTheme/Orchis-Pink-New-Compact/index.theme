@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Orchis-Pink-New-Compact
+Comment=An flat Materia Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Orchis-Pink-New-Compact
+MetacityTheme=Orchis-Pink-New-Compact
+IconTheme=Tela-circle-dark
+ButtonLayout=close,minimize,maximize:menu
